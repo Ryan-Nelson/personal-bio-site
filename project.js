@@ -80,11 +80,11 @@ const createBioPage = () => {
             xString +=  `</ul>`;     
             xString += `</div>`;
         };
-    PrintToDom(xString, 'projectsPage');
+    PrintToDom(xString, 'technologiesPage');
   };
 
 
-  document.getElementById('navtoBio').addEventListener("click", (event) => {
+  document.getElementById('navToBio').addEventListener("click", (event) => {
       event.preventDefault(); 
       createBioPage();
   });
