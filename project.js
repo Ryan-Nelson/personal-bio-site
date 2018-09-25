@@ -62,34 +62,44 @@ const createBioPage = () => {
     PrintToDom(xString, 'bioPage');
   };
   const createTechnologiesPage = () => {
-    let xString = '';
+    let xString = '';{
             xString += `<div class="technologies">`;
-            xString +=    <ul>;  
-            xString +=      <li>C</li>;  
-            xString +=      <li>C#</li>;
-            xString +=      <li>DOS</li>;
-            xString +=    <li>Jave</li>;
-            xString +=    <li>basic</li>;
-            xString +=    <li>Dark Basic</li>;
-            xString +=    <li>HTML</li>;
-            xString +=    <li>CSS</li>;
-            xString +=    <li>JavaScrip</li>;
-            xString +=    <li>Bootstrap</li>;
-            xString +=    <li>Jquary</li>;
-            xString +=    <li>VScode</li>;
-            xString +=  </ul>;     
+            xString +=    `<ul>`;  
+            xString +=      `<li>C</li>`;  
+            xString +=      `<li>C#</li>`;
+            xString +=      `<li>DOS</li>`;
+            xString +=    `<li>Jave</li>`;
+            xString +=    `<li>basic</li>`;
+            xString +=    `<li>Dark Basic</li>`;
+            xString +=    `<li>HTML</li>`;
+            xString +=    `<li>CSS</li>`;
+            xString +=    `<li>JavaScrip</li>`;
+            xString +=    `<li>Bootstrap</li>`;
+            xString +=    `<li>Jquary</li>`;
+            xString +=    `<li>VScode</li>`;
+            xString +=  `</ul>`;     
             xString += `</div>`;
         };
     PrintToDom(xString, 'projectsPage');
   };
-createProjectCard();
 
 
+  document.getElementById('navtoBio').addEventListener("click", (event) => {
+      event.preventDefault(); 
+      createBioPage();
+  });
+ 
+ 
+ 
+  document.getElementById('navToTechnologies').addEventListener("click", (event) => {
+      event.preventDefault();
+      createTechnologiesPage();
+  });
 
-  document.getElementById('navtoBoi').addEventListener("dblclick", (event) => {
-      e.preventDefault(); 
-      
-  })
+  document.getElementById('navToProjects').addEventListener("click", (event) => {
+      event.preventDefault();
+      createProjectCard();
+  });
 
   
 
