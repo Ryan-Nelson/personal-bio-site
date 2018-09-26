@@ -49,12 +49,58 @@ const createProjectCard = () => {
           xString +=    `<button class="project-button"><a target="_blank" href="${projects[i].url}">view website</a></button>`;
           xString +=    `<button class="github-button"><a target="_blank" href="${projects[i].githubUrl}">view github</a></button>`;
           xString +=    `</div>`;           
-          xString += `</div>`;
       }
   }
   PrintToDom(xString, 'projectsPage');
 };
+const createBioPage = () => {
+    let xString = '';{
+            xString += `<div class="bio">`;
+            xString +=    `<p>I'm currently in air filter poduction, and looking too change ceear path. I love that in programin you can break things and not get in trouble.</p>`;         
+            xString += `</div>`;
+        };
+    PrintToDom(xString, 'bioPage');
+  };
+  const createTechnologiesPage = () => {
+    let xString = '';{
+            xString += `<div class="technologies">`;
+            xString +=    `<ul>`;  
+            xString +=      `<li>C</li>`;  
+            xString +=      `<li>C#</li>`;
+            xString +=      `<li>DOS</li>`;
+            xString +=    `<li>Jave</li>`;
+            xString +=    `<li>basic</li>`;
+            xString +=    `<li>Dark Basic</li>`;
+            xString +=    `<li>HTML</li>`;
+            xString +=    `<li>CSS</li>`;
+            xString +=    `<li>JavaScrip</li>`;
+            xString +=    `<li>Bootstrap</li>`;
+            xString +=    `<li>Jquary</li>`;
+            xString +=    `<li>VScode</li>`;
+            xString +=  `</ul>`;     
+            xString += `</div>`;
+        };
+    PrintToDom(xString, 'technologiesPage');
+  };
 
-createProjectCard();
+
+  document.getElementById('navToBio').addEventListener("click", (event) => {
+      event.preventDefault(); 
+      createBioPage();
+  });
+ 
+ 
+ 
+  document.getElementById('navToTechnologies').addEventListener("click", (event) => {
+      event.preventDefault();
+      createTechnologiesPage();
+  });
+
+  document.getElementById('navToProjects').addEventListener("click", (event) => {
+      event.preventDefault();
+      createProjectCard();
+  });
+
+  
 
   
